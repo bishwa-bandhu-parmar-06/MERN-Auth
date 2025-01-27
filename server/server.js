@@ -12,23 +12,22 @@ const port = process.env.PORT || 3000;
 
 
 connectDB();
-const allowedOrigins = ['http://localhost:5173', 'http://localhost:4000'];
+// const allowedOrigins = ['http://localhost:5173', 'http://localhost:4000'];
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true
-}));
+// app.use(cors({
+//   origin: function (origin, callback) {
+//     if (!origin || allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   credentials: true
+// }));
 
 
 
-<<<<<<< HEAD
-=======
+
 const allowedOrigins = ['http://localhost:5173', 'http://localhost:4000'];
 
 app.use(cors({
@@ -42,7 +41,7 @@ app.use(cors({
   credentials: true
 }));
 // app.use(cors({credentials: true}));
->>>>>>> 40393c5d81a70a48402c94054a5afabde5deb535
+
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
