@@ -15,8 +15,8 @@ connectDB();
 
 const _dirname = path.resolve();
 
-// const allowedOrigins = ['http://localhost:517', 'http://localhost:4000'];
-const allowedOrigins = "https://mern-auth-p7ma.onrender.com";
+const allowedOrigins = ['http://localhost:5173', 'http://localhost:4000'];
+// const allowedOrigins = "https://mern-auth-p7ma.onrender.com";
 
 app.use(cors({
   origin: function (origin, callback) {
