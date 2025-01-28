@@ -36,9 +36,9 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // API Endpoints
-app.get('/', (req, res) => {
-    res.send('Hello World');
-});
+// app.get('/', (req, res) => {
+//     res.send('Hello World');
+// });
 
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
