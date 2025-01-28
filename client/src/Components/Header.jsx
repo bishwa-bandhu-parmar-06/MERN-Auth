@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { assets } from '../assets/assets';
-import "../Components/styles/header.css";
+import "../Components/styles/Header.css";
 import { AppContext } from '../context/AppContext';
 
 const Header = () => {
