@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import { assets } from '../assets/assets';
-import '../Components/styles/email-verify.css';
+import '../Components/styles/email-Verify.css';
+
 import axios from 'axios';
 import { AppContext } from '../context/AppContext';
 import { toast } from 'react-toastify';
