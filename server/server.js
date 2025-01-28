@@ -9,24 +9,11 @@ const userRouter = require('./routes/user.routes');
 const connectDB = require('./config/mongoDb');
 const app = express();
 const port = process.env.PORT || 3000;  
-
+const path =  require('path');
 
 connectDB();
-// const allowedOrigins = ['http://localhost:5173', 'http://localhost:4000'];
 
-// app.use(cors({
-//   origin: function (origin, callback) {
-//     if (!origin || allowedOrigins.includes(origin)) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error('Not allowed by CORS'));
-//     }
-//   },
-//   credentials: true
-// }));
-
-
-
+const _dirname = path.resolve();
 
 const allowedOrigins = ['http://localhost:5173', 'http://localhost:4000'];
 
@@ -56,6 +43,11 @@ app.get('/', (req, res) => {
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
 
+
+app.use(express.static(path.join(_dirname, '/client/dist')));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(_dirname, 'client' , 'dist', 'index.html'));
+});
 
 app.listen(port, () => {
   console.log(`Server is running on PORT : ${port}`);
