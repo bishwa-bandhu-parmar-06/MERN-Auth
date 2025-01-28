@@ -28,7 +28,7 @@ connectDB();
 
 
 
-const allowedOrigins = ['http://localhost:5173', 'http://localhost:4000'];
+const allowedOrigins = ['https://mern-authentication-backend-lkle.onrender.com'];
 
 app.use(cors({
   origin: function (origin, callback) {
